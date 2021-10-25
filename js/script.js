@@ -55,7 +55,7 @@ class UI{
         if(target.hasAttribute('href')){
             target.parentElement.parentElement.remove();
             //console.log(target);
-            Store.removeBook(target.parentElement.parentElementSibling.textContent.trim());
+            Store.removeBook(target.parentElement.previousElementSibling.textContent.trim());
             UI.showAlert('Book Removed!', 'success');
         }
     }
